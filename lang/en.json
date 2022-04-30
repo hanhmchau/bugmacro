@@ -1,0 +1,7 @@
+{
+    "bugmacro.disable_number-s": "Disable executing macro with number keypresses",
+    "bugmacro.disable_number-l": "Exactly as it says on the tin, never proc your macros by updating your potion count again.",
+    "bugmacro.disable_macro-s": "Disable moving tokens with WASD keys",
+    "bugmacro.disable_macro-l": "Exactly as it says on the tin, never move your tokens around by typing again."
+}
+  
