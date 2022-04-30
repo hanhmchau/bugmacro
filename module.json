@@ -2,7 +2,7 @@
 	"name": "bugmacro",
 	"title": "Bugmacro",
 	"description": "Disable executing a macro with number keypresses.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"minimumCoreVersion": "0.7.0",
 	"compatibleCoreVersion": "0.7.10",
 	"author": "Arietta",
@@ -19,6 +19,6 @@
 	  ],
 	
 	"url": "https://github.com/hanhmchau/bugmacro",
-	"manifest": "https://raw.githubusercontent.com/hanhmchau/bugmacro/master/module.json",
-	"download": "https://github.com/hanhmchau/bugmacro/archive/0.0.1.zip"
+	"manifest": "https://raw.githubusercontent.com/hanhmchau/bugmacro/main/module.json",
+	"download": "https://github.com/hanhmchau/bugmacro/archive/0.0.2.zip"
 }

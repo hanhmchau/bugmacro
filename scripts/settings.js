@@ -1,5 +1,6 @@
 export const ModuleOptions = {
-	DISABLE_NUMBER: "disable_number"
+	DISABLE_NUMBER: "disable_number",
+	DISABLE_WASD: "disable_wasd"
 };
 
 const OnChangeFunctions = {
@@ -16,7 +17,17 @@ export class ModuleSettings {
 			ModuleOptions.DISABLE_NUMBER,
 			this._buildConfig(ModuleOptions.DISABLE_NUMBER, {
 				default: true,
-				scope: "world",
+				scope: "client",
+				onChange: OnChangeFunctions.NOTHING
+			})
+		);
+
+		game.settings.register(
+			this.MODULE_NAME,
+			ModuleOptions.DISABLE_WASD,
+			this._buildConfig(ModuleOptions.DISABLE_WASD, {
+				default: true,
+				scope: "client",
 				onChange: OnChangeFunctions.NOTHING
 			})
 		);

@@ -11,4 +11,10 @@ Hooks.on("setup", () => {
 			wrapped(...args);
 		}
 	});
+
+	libWrapper.register("bugmacro", "KeyboardManager.prototype._handleMovement", function (wrapped, ...args) {
+		if (!ModuleSettings.getSetting(ModuleOptions.DISABLE_WASD)) {
+			wrapped(...args);
+		}
+	});
 });
