@@ -18,7 +18,7 @@ export class ModuleSettings {
 			this._buildConfig(ModuleOptions.DISABLE_NUMBER, {
 				default: true,
 				scope: "client",
-				onChange: OnChangeFunctions.NOTHING
+				onChange: OnChangeFunctions.RELOAD
 			})
 		);
 
@@ -28,7 +28,7 @@ export class ModuleSettings {
 			this._buildConfig(ModuleOptions.DISABLE_WASD, {
 				default: true,
 				scope: "client",
-				onChange: OnChangeFunctions.NOTHING
+				onChange: OnChangeFunctions.RELOAD
 			})
 		);
 	}

@@ -1,20 +1,15 @@
 "use strict";
 
-import { libWrapper } from "./lib/libwrapper.js";
 import { ModuleSettings, ModuleOptions } from "./scripts/settings.js";
+import WASDKeybinder from "./scripts/wasd.js";
+import NumberKeyBinder from "./scripts/numbers.js";
 
-Hooks.on("setup", () => {
+Hooks.on("ready", () => {
 	ModuleSettings.registerSettings();
 
-	libWrapper.register("bugmacro", "KeyboardManager.prototype._onDigit", function (wrapped, ...args) {
-		if (!ModuleSettings.getSetting(ModuleOptions.DISABLE_NUMBER)) {
-			wrapped(...args);
-		}
-	});
+	const wasd = new WASDKeybinder();
+	wasd.bind(!ModuleSettings.getSetting(ModuleOptions.DISABLE_WASD));
 
-	libWrapper.register("bugmacro", "KeyboardManager.prototype._handleMovement", function (wrapped, ...args) {
-		if (!ModuleSettings.getSetting(ModuleOptions.DISABLE_WASD)) {
-			wrapped(...args);
-		}
-	});
+	const number = new NumberKeyBinder();
+	number.bind(!ModuleSettings.getSetting(ModuleOptions.DISABLE_NUMBER));
 });
